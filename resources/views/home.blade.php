@@ -11,8 +11,9 @@
                         <img class="img-fluid w-100" style="object-fit: contain "
                             src="https://safeforts.com/uploads/dummy/21/12/61ae34edec7010612211638806765.jpeg"
                             alt="eventimage" />
-                        <div class="content position-absolute wow fadeInLeft animate__animated animate__backInLeft" style="top: 50px; left : 100px">
-                            <h1 class="fw-bolder">Order Healty Food!!</h1>
+                        <div class="content position-absolute wow fadeInLeft animate__animated animate__backInLeft "
+                            style="top: 50px; left : 100px">
+                            <h1 class="fw-bolder title" style="font-size: 50px">Order Healty Food!!</h1>
                             <h2 class="fw-bolder">New Arrivals!!!</h2>
                             <p>Lorem ipsum dolor sit amet consectetur
                             </p>
@@ -27,8 +28,9 @@
                         <img class="img-fluid w-100" style="object-fit: contain "
                             src="https://safeforts.com/uploads/dummy/21/12/61ae34edec7010612211638806765.jpeg"
                             alt="eventimage" />
-                        <div class="content position-absolute wow fadeInLeft animate__animated animate__backInLeft" style="top: 50px; left : 100px">
-                            <h1 class="fw-bolder">Order Healty Food!!</h1>
+                        <div class="content position-absolute wow fadeInLeft animate__animated animate__backInLeft "
+                            style="top: 50px; left : 100px">
+                            <h1 class="fw-bolder title" style="font-size: 50px">Order Healty Food!!</h1>
                             <h2 class="fw-bolder">New Arrivals!!!</h2>
                             <p>Lorem ipsum dolor sit amet consectetur
                             </p>
@@ -43,8 +45,9 @@
                         <img class="img-fluid w-100" style="object-fit: contain "
                             src="https://safeforts.com/uploads/dummy/21/12/61ae34edec7010612211638806765.jpeg"
                             alt="eventimage" />
-                        <div class="content position-absolute wow fadeInLeft animate__animated animate__backInLeft" style="top: 50px; left : 100px">
-                            <h1 class="fw-bolder">Order Healty Food!!</h1>
+                        <div class="content position-absolute wow fadeInLeft animate__animated animate__backInLeft "
+                            style="top: 50px; left : 100px">
+                            <h1 class="fw-bolder title" style="font-size: 50px">Order Healty Food!!</h1>
                             <h2 class="fw-bolder">New Arrivals!!!</h2>
                             <p>Lorem ipsum dolor sit amet consectetur
                             </p>
@@ -69,10 +72,172 @@
         {{--  --}}
 
 
+        {{-- firts category --}}
+        <div class="container mb-4">
+            <div class="row justify-content-start mt-2 gap-4">
+                <div class="col-12 col-md-3 relative  rounded  overflow-hidden secondHero ">
+                    <img class="figure-img img-fluid"
+                        src="https://safeforts.com/uploads/dummy/21/12/61ae3b1ad946c0612211638808346.jpg" alt="something" />
+
+                    <div class="content position-absolute wow fadeInLeft " style="top: 40px; left : 80px">
+                        <h1 class="fw-bolder text-white title">Tasty Hot Sppicy</h1>
+                    </div>
+
+                    <div class="animateObj"
+                        style="position: absolute; bottom : -20; right : -20; height : 80px; width : 80px; border-radius : 40%; background-color: rgba(13, 172, 37, 0.506)">
+                    </div>
+
+                </div>
+                <div class="col-12 col-md-3 relative  rounded  overflow-hidden secondHero ">
+                    <img class="figure-img img-fluid"
+                        src="https://safeforts.com/uploads/dummy/21/12/61ae3b1ad946c0612211638808346.jpg" alt="something" />
+
+                    <div class="content position-absolute wow fadeInLeft " style="top: 40px; left : 80px">
+                        <h1 class="fw-bolder text-white title">Tasty Hot Sppicy</h1>
+                    </div>
+
+                    <div class="animateObj"
+                        style="position: absolute; bottom : -20; right : -20; height : 80px; width : 80px; border-radius : 40%; background-color: rgba(13, 172, 37, 0.506)">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        {{--  --}}
+
+        {{-- product list --}}
+        <div class="container  overflow-hidden mb-5 mt-5">
+            <div class="swiper-container mySwiper">
+                <div class="swiper-wrapper">
+
+                    <x-product />
+                    <x-product hasTime='true' />
+                    <x-product noStock='true' />
+                    <x-product />
+                    <x-product hasTime='true' />
+                    <x-product noStock='true' />
+                    <x-product hasTime='true' />
+                    <x-product noStock='true' />
+
+
+                </div>
+                <div class="container" >
+                    <div class="swipers-button-prev"></div>
+                    <div class="swipers-button-next"></div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        {{--  --}}
+
+        <div style="margin-top: 120px">
+            Something
+        </div>
     @endsection
 
+
+
+
     <style>
-        .mainSwiper {
-            height: 400px !important;
+        .mainSwiper,
+        .mySwiper {
+            height: 520px !important;
+        }
+
+        .secondHero {
+            height: 150px !important;
+            position: relative !important;
+        }
+
+
+        .mySwiper {
+            width: 100%;
+            height: auto;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+        .item {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            overflow: hidden;
+            display: -webkit-flex;
+            width: 300px !important;
+            display: flex;
+            -webkit-box-pack: start;
+            -ms-flex-pack: start;
+            -webkit-justify-content: start;
+            justify-content: start;
+            -webkit-box-align: start;
+            -ms-flex-align: start;
+            -webkit-align-items: start;
+            align-items: start;
+            border-radius: 10px;
+            box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.2);
+
+
+        }
+
+        .itemImage,
+        .itemImage img {
+            height: 300px !important;
+            width: 100% !important;
+            overflow: hidden;
+            border-radius: 10px;
+            transition: all 0.2s ease-in;
+        }
+
+        .itemImage img:hover {
+            transform: scale(1.2)
+        }
+
+        .secondHero::before {
+            content: "";
+            height: 100% !important;
+            width: 100% !important;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+
+        .secondHero img {
+            object-fit: contain !important;
+        }
+
+        .secondHero .animateObj {
+
+            transition: all 0.5s ease-in;
+
+
+        }
+
+        .secondHero:hover .animateObj {
+            height: 200% !important;
+            width: 200% !important;
+            background-color: rgb(13, 172, 37);
+            transition: all 0.5s ease-in;
+
+
+        }
+
+        @media screen and (max-width : 768px) {
+            .title {
+                font-size: 30px !important;
+            }
+
+            .mainSwiper,
+            .mySwiper {
+                height: 250px !important;
+
+            }
         }
     </style>
