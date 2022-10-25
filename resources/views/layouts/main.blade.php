@@ -96,6 +96,7 @@
 
 
     {{-- Footer --}}
+    <x-footer/>
 
     {{--  --}}
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
@@ -135,8 +136,8 @@
 
             },
             navigation: {
-                nextEl: '.swipers-button-next',
-                prevEl: '.swipers-button-prev',
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
             },
             pagination: {
                 el: ".swiper-pagination",

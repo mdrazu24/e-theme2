@@ -1,9 +1,9 @@
-@props(['hasTime', 'noStock'])
+@props(['hasTime', 'noStock', 'img'])
 
-<div class="swiper-slide item " style="user-select: none;">
+<div class="swiper-slide item " style="user-select: none">
     <div class="w-100 h-100 d-flex flex-column gap-2">
         <div class="itemImage position-relative ">
-            <img class="img-fluid" src="images/food1.webp" alt="something" />
+            <img class="img-fluid" src={{$img}} alt="something" />
             <div class="position-absolute top-0 left-0 " style="width: 100%; height : 50px; background-color: rgb(5, 137, 56)">
                 <div class="h-100 w-100 d-flex align-items-center  pt-4 px-2 justify-content-between">
                     <p style="font-size: 14px">View Product</p>

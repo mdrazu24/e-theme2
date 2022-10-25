@@ -106,37 +106,72 @@
 
         {{--  --}}
 
-        {{-- product list --}}
         <div class="container  overflow-hidden mb-5 mt-5">
-            <div class="swiper-container mySwiper">
+            <h1>New Items</h1>
+
+            <div class="mySwiper position-relative">
+
                 <div class="swiper-wrapper">
-
                     <x-product />
-                    <x-product hasTime='true' />
+                    <x-product hasTime='true' img="images/food2.webp" />
                     <x-product noStock='true' />
                     <x-product />
+                    <x-product hasTime='true' />s
+                    <x-product noStock='true' img="images/food2.webp" />
                     <x-product hasTime='true' />
-                    <x-product noStock='true' />
-                    <x-product hasTime='true' />
-                    <x-product noStock='true' />
-
-
+                    <x-product noStock='true' img="images/food2.webp" />
                 </div>
-                <div class="container" >
-                    <div class="swipers-button-prev"></div>
-                    <div class="swipers-button-next"></div>
-                </div>
+
+            </div>
+
+        </div>
+
+        </div>
+
+        <div class="container">
+            <h1>All Items</h1>
+
+            <div class="container d-flex  align-items-center justify-content-start " style="flex-wrap: wrap; gap: 20px; margin-bottom: 20px" >
+                                    <x-product />
+                                    <x-product hasTime='true' img="images/food2.webp" />
+                                    <x-product />
+                                    <x-product />
+                                    <x-product img="images/food2.webp" />
+                                    <x-product />
+                                    <x-product hasTime='true' />
+                                    <x-product />
+                                    <x-product hasTime='true' />
+                                    <x-product />
+
 
             </div>
 
 
         </div>
 
-        {{--  --}}
 
-        <div style="margin-top: 120px">
-            Something
+
+           <div class="container  overflow-hidden mb-5 mt-5">
+            <h1>Featured Items</h1>
+
+            <div class="mySwiper position-relative">
+
+                <div class="swiper-wrapper">
+                    <x-product />
+                    <x-product hasTime='true' img="images/food2.webp" />
+                    <x-product noStock='true' />
+                    <x-product />
+                    <x-product hasTime='true' />s
+                    <x-product noStock='true' img="images/food2.webp" />
+                    <x-product hasTime='true' />
+                    <x-product noStock='true' img="images/food2.webp" />
+                </div>
+
+            </div>
+
         </div>
+
+
     @endsection
 
 
@@ -160,6 +195,8 @@
             margin-left: auto;
             margin-right: auto;
         }
+
+
 
 
         .item {
@@ -234,8 +271,7 @@
                 font-size: 30px !important;
             }
 
-            .mainSwiper,
-            .mySwiper {
+            .mainSwiper {
                 height: 250px !important;
 
             }
