@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/fontawesome.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <style>
         body {
             font-family: 'Nunito', sans-serif;
@@ -26,10 +26,10 @@
 <body x-data="{ open: false }" x-cloak class="antialiased position-relative">
     {{-- header --}}
     <nav class="navbar p-0 pt-3  bg-light">
-        <div class="container-fluid border-bottom pb-2">
+        <div class="container-fluid border-bottom pb-3">
             <div class="container">
 
-                <div class="row w-100 justify-content-between  ">
+                <div class="row w-100   ">
                     <div class="col-12 d-flex align-items-center justify-content-center   col-md-2">
                         <p @click="open = ! open" class="d-block d-md-none align-self-end" style="padding: 4px"><i
                                 class="fa-solid fa-bars"></i></p>
@@ -39,7 +39,8 @@
                         role="search">
                         <input class="form-control input-lg rounded-0  px-4  " type="search" placeholder="Search..."
                             aria-label="Search" style="max-width: 300px; height : 45px">
-                        <button class="btn btn-success rounded-0" style="transform: translateX(-5%); height : 45px">Search</button>
+                        <button class="btn btn-success rounded-0"
+                            style="transform: translateX(-5%); height : 45px">Search</button>
                     </form>
                     <div class="col-12 col-md-3 p-4 p-md-0 d-flex justify-content-around  align-items-center ">
                         <div class="icon">
@@ -65,7 +66,10 @@
 
             <div class="w-100 px-5 d-none d-md-flex py-2 ">
                 <ul class="d-flex gap-4 w-100 cursor-pointer list-unstyled">
-                    <li class="btn border text-success rounded-0 border-success border-top-0 border-end-0 border-start-0 "><a>Home</a></li>
+                    <li
+                        class="btn border text-success rounded-0 border-success border-top-0 border-end-0 border-start-0 ">
+                        <a>Home</a>
+                    </li>
                     <li class="btn "><a>Products</a></li>
                     <li class="btn "><a>Menu</a></li>
                     <li class="btn "><a>Contact</a></li>
@@ -81,12 +85,19 @@
 
     </nav>
 
-    {{-- Header --}}
+    {{--  --}}
 
 
     {{-- Contents --}}
     @yield('content')
 
+
+    {{--  --}}
+
+
+    {{-- Footer --}}
+
+    {{--  --}}
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
@@ -94,28 +105,46 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
     </script>
+
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    {{-- <script type="module">
+    <script type="module">
   import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js'
 
-  const swiper = new Swiper('.swiper', {
+
+const swiper = new Swiper('.swiper', {
   // Optional parameters
   direction: 'horizontal',
   loop: true,
-    autoplay: {
-   delay: 3000,
- },
-
-})
+  autoplay: {
+    delay: 3000,
+  },
 
 
-</script> --}}
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+
+});
+
+
+
+</script>
 
 </body>
 
 </html>
 
 <style>
+    .container-fluid {
+        box-sizing: border-box !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
     .icon {
         padding: 4px;
         border-radius: 50%;
