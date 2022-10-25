@@ -24,6 +24,17 @@
 </head>
 
 <body x-data="{ open: false }" x-cloak class="antialiased position-relative">
+
+    {{-- bottom --}}
+    <div class="container-fluid d-flex text-white align-items-center justify-content-around d-md-none position-fixed" style="bottom: 0; left: 0; right : 0; z-index: 10000 !important; height : 40px; background-color: rgb(9, 92, 5)" >
+        <i class="fa-solid fa-house"></i>
+        <i class="fa-solid fa-heart"></i>
+        <i class="fa-solid fa-user"></i>
+        <i class="fa-solid fa-cart-shopping"></i>
+    </div>
+
+    {{--  --}}
+
     {{-- header --}}
     <nav class="navbar p-0 pt-3  bg-light">
         <div class="container-fluid border-bottom pb-3">
@@ -31,8 +42,7 @@
 
                 <div class="row w-100   ">
                     <div class="col-12 d-flex align-items-center justify-content-center   col-md-2">
-                        <p @click="open = ! open" class="d-block d-md-none align-self-end" style="padding: 4px"><i
-                                class="fa-solid fa-bars"></i></p>
+
                         <img src="images/something.png" alt="something" />
                     </div>
                     <form class="d-flex col-12 col-md-7 col-lg-6  align-items-center justify-content-center"
@@ -42,7 +52,16 @@
                         <button class="btn btn-success rounded-0"
                             style="transform: translateX(-5%); height : 45px">Search</button>
                     </form>
-                    <div class="col-12 col-md-3 p-4 p-md-0 d-flex justify-content-around  align-items-center ">
+
+                    <div class="container p-4 d-flex d-md-none align-items-center justify-content-between">
+                        <p @click="open = ! open" class="d-block d-md-none align-self-end" style="padding: 4px"><i
+                                class="fa-solid fa-bars text-success"></i></p>
+
+                        <i class="fa-solid fa-cart-shopping text-success"></i>
+                    </div>
+
+                    <div
+                        class="col-12 col-md-3 p-4 p-md-0 d-none d-md-flex justify-content-around  align-items-center ">
                         <div class="icon">
                             <i class="fa-solid fa-cart-shopping"></i>
 
@@ -61,6 +80,44 @@
                 </div>
             </div>
         </div>
+
+        {{-- header options --}}
+        <div class="headerMenu" x-transition.origin.top.left x-show="open"
+            style="z-index: 10000; position: absolute; top: 0; right: 0; bottom: 0; left: 0; background-color: transparent ">
+            <div class="position-fixed top-0 left-0 bg-white" style="bottom: 0; width: 50vw;">
+                <div class="w-100  d-flex justify-content-end p-4 "> <button @click="open = ! open" type="button"
+                        class="btn-close float-left" aria-label="Close"></button>
+                </div>
+
+                <div class="p-4">
+                    <div class="p-0 d-flex align-items-start justify-content-start">
+                        <ul
+                            style="display:  flex; flex-direction: column; row-gap: 10px;  padding: 4px; padding-top: 6px; color : rgb(7, 22, 41); align-items: flex-start">
+                            <li class="btn text-primary fw-bold ">
+                                <i class="fa-solid fa-arrow-right"></i> Home
+                            </li>
+                            <li class="btn">
+                                <i class="fa-solid fa-arrow-right"></i> Products
+                            </li>
+
+                            <li class="btn">
+                                <i class="fa-solid fa-arrow-right"></i> Blogs
+                            </li>
+                            <li class="btn">
+                                <i class="fa-solid fa-arrow-right"></i> Contacts
+                            </li>
+
+
+                        </ul>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+        {{--  --}}
 
         <div class="container">
 
@@ -96,7 +153,7 @@
 
 
     {{-- Footer --}}
-    <x-footer/>
+    <x-footer />
 
     {{--  --}}
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
